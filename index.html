@@ -15,22 +15,37 @@
 
   <body>
     <header>
-      <h1>Joe Lambert &mdash; Web Developer</h1>
-      <p>I work with folks to bring their ideas to the web.</p>
-      <p>
-        Have an idea? Go on ahead and
-        <a target="blank" href="https://twitter.com/losephjambert"
-          ><span class="jump-link">Tweet at me</span></a
-        >
-      </p>
+      <nav>
+        <ul class="nav-links">
+          <li>
+            <a target="blank" href="https://github.com/losephjambert"><span class="jump-link">Github</span></a>
+          </li>
+          <li>
+            <a target="blank" href="https://codepen.io//losephjambert"><span class="jump-link">Codepen</span></a>
+          </li>
+          <li>
+            <a target="blank" href="https://twitter.com/losephjambert"><span class="jump-link">Twitter</span></a>
+          </li>
+        </ul>
+      </nav>
+      <section class="content __top">
+        <h1>Joe Lambert &mdash; Web Developer</h1>
+        <p>I work with folks to bring their ideas to the web.</p>
+        <p>
+          Have an idea? Go on ahead and
+          <a target="blank" href="https://twitter.com/losephjambert"><span class="jump-link">Tweet at me</span></a>
+        </p>
+      </section>
     </header>
-    <main></main>
+    <main>
+      section.
+    </main>
     <footer>
       <p>&copy; Joe Lambert <span id="date-year"></span></p>
     </footer>
     <script>
       let d = new Date();
-      const copyrightElement = document.getElementById("date-year");
+      const copyrightElement = document.getElementById('date-year');
       copyrightElement.textContent = d.getFullYear();
     </script>
   </body>
