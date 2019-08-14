@@ -129,6 +129,7 @@ table {
 /* Set every element's box-sizing to border-box */
 * {
   box-sizing: border-box;
+  max-width: 100%;
 }
 html,
 body {
@@ -179,7 +180,7 @@ a:visited {
   color: #e41f08;
 }
 .jump-link-icon {
-  font-size: 0.8rem;
+  font-size: 1rem;
 }
 .wrapper {
   font-size: 1.5rem;
@@ -189,5 +190,23 @@ a:visited {
   flex-flow: row wrap;
   justify-content: space-evenly;
   width: 60%;
-  margin-left: auto;
+  margin: 25px 0 50px auto;
+}
+.wrapper header .content.__top {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  padding: 15px;
+  margin: 0 0 50px 0;
+}
+.wrapper header .content.__top img {
+  border-radius: 100%;
+  flex: 0 1 250px;
+}
+.wrapper header .content.__top div {
+  width: calc(100% - 250px);
+  padding-left: 25px;
+}
+.wrapper header .content.__top div h1 {
+  margin: 0 0 25px 0;
 }
