@@ -178,3 +178,6 @@ a:hover {
 a:visited {
   color: #e41f08;
 }
+.jump-link-icon {
+  font-size: 0.8rem;
+}
