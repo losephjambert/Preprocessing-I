@@ -1,19 +1,151 @@
-<!doctype html>
+<!DOCTYPE html>
 
 <html lang="en">
+
 <head>
-  <meta charset="utf-8">
+  <meta charset="utf-8" />
 
   <title>My Resume</title>
 
-  <link rel="stylesheet" href="css/index.css">
+  <link rel="stylesheet" href="css/index.css" />
 
   <!--[if lt IE 9]>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
-  <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+    <![endif]-->
 </head>
 
 <body>
-  <h1>My Resume</h1>
+  <div class="wrapper">
+    <header>
+      <nav>
+        <ul class="nav-links">
+          <li>
+            <a target="blank" href="https://github.com/losephjambert"><span>Github</span></a>
+            <span role="img" aria-label="North East Arrow" class="jump-link-icon">↗️</span>
+          </li>
+          <li>
+            <a target="blank" href="https://codepen.io//losephjambert"><span>Codepen</span></a>
+            <span role="img" aria-label="North East Arrow" class="jump-link-icon">↗️</span>
+          </li>
+          <li>
+            <a target="blank" href="https://twitter.com/losephjambert"><span>Twitter</span></a>
+            <span role="img" aria-label="North East Arrow" class="jump-link-icon">↗️</span>
+          </li>
+          <li>
+            <a href="#"><span>Dev log</span></a>
+            <span role="img" aria-label="North East Arrow" class="jump-link-icon">↗️</span>
+          </li>
+        </ul>
+      </nav>
+      <section class="content __top">
+        <img src="img/profile.jpg" alt="Joe Lambert holding his dog Batman" />
+        <div>
+          <h1>Joe Lambert &mdash; <span class="break">Web Developer</span></h1>
+          <p>
+            I work with folks to bring their ideas to the web. Have an idea? Go on ahead and
+            <a target="blank" href="https://twitter.com/losephjambert"><span>Tweet at me</span></a>
+            <span role="img" aria-label="North East Arrow" class="jump-link-icon">↗️</span>
+          </p>
+        </div>
+      </section>
+    </header>
+    <main>
+      <section class="content __middle">
+        <div>
+          <section>
+            <h2>Work History</h2>
+            <section>
+              <h3>Freelance | 2016 &ndash; present</h3>
+              <h4>Web Development</h4>
+              <p>
+                Work with select clients local to the greater Seattle, WA area to bring their brand to the web. Recent
+                clients include b~side foods, The Lumiere Group, Trust Issues Podcast, and Guillermo Bravo.
+              </p>
+            </section>
+            <section>
+              <h3>Hulu | 2017 &ndash; 2019</h3>
+              <h4>Technical Program Management</h4>
+              <p>
+                Streamline dev process, implement and execute using agile methodologies, striving for when and how
+                much work can be done in a given time. As part of the browse content pipeline, responsibilities also
+                include refining product and SLA requirements, costing the effort of large scale projects that span
+                the stack, and driving cross-team communication.
+              </p>
+            </section>
+            <section>
+              <h3>Garmentory | 2017</h3>
+              <h4>Web Design + Frontend Development</h4>
+              <p>
+                Find the overlap between customer needs, business needs, and technology needs to design a worthwhile
+                customer experience across the Garmentory platform. Primary responsibilities were to identify customer
+                needs and design experiences that met them through the use of user flows, customer journeys,
+                wireframes, prototypes, and production ready front-end code.
+              </p>
+            </section>
+          </section>
+        </div>
+        <div>
+          <section>
+            <h2>Technical Proficiences</h2>
+            <section>
+              <h3>Langauges</h3>
+              <ul>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+              </ul>
+            </section>
+            <section>
+              <h3>Libraries | Frameworks | Tools</h3>
+              <section>
+                <!-- <h4>CSS</h4> -->
+                <ul>
+                  <li>SCSS</li>
+                  <li>Less</li>
+                  <li>Styled Components</li>
+                  <li>Tailwind</li>
+                </ul>
+              </section>
+              <section>
+                <!-- <h4>JavaScript</h4> -->
+                <ul>
+                  <li>React</li>
+                  <li>Gatsby</li>
+                  <li>Svelte</li>
+                  <li>Next</li>
+                  <li>Mobx</li>
+                  <li>Redux</li>
+                  <li>Popmotion</li>
+                  <li>Node</li>
+                  <li>jQuery</li>
+                </ul>
+              </section>
+              <section>
+                <!-- <h4>Platforms</h4> -->
+                <ul>
+                  <li>Contentful</li>
+                  <li>Shopify</li>
+                  <li>Wordpress</li>
+                  <li>Heroku</li>
+                  <li>Netlify</li>
+                  <li>Firebase</li>
+                  <li>Hasura</li>
+                </ul>
+              </section>
+            </section>
+          </section>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <p>&copy; Joe Lambert&nbsp;<span id="date-year"></span></p>
+    </footer>
+  </div>
+  <script>
+    let d = new Date();
+    const copyrightElement = document.getElementById('date-year');
+    copyrightElement.textContent = d.getFullYear();
+  </script>
 </body>
+
 </html>

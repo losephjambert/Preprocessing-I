@@ -1,1 +1,344 @@
-/* Compile your LESS file! */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* Set every element's box-sizing to border-box */
+* {
+  box-sizing: border-box;
+  max-width: 100%;
+}
+html,
+body {
+  min-height: 100%;
+}
+body {
+  animation: colorFade 25000ms linear infinite;
+}
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: local('Open Sans Light'), local('OpenSans-Light'), url(https://fonts.gstatic.com/s/opensans/v17/mem5YaGs126MiZpBA-UN_r8OUuhs.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Open Sans Regular'), local('OpenSans-Regular'), url(https://fonts.gstatic.com/s/opensans/v17/mem8YaGs126MiZpBA-UFVZ0e.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: local('Open Sans Bold'), local('OpenSans-Bold'), url(https://fonts.gstatic.com/s/opensans/v17/mem5YaGs126MiZpBA-UN7rgOUuhs.ttf) format('truetype');
+}
+html {
+  font-size: 62.5%;
+}
+@media (max-width: 500px) {
+  html {
+    font-size: 55%;
+  }
+}
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 700;
+}
+.break {
+  display: inline-flex;
+}
+@media (max-width: 500px) {
+  .break {
+    display: block;
+  }
+}
+a {
+  color: hotpink;
+}
+a:hover {
+  color: #ff9cce;
+}
+a:hover ~ .jump-link-icon {
+  transform: translate3d(10px, 0, 0);
+}
+a:visited {
+  color: #e80074;
+}
+.jump-link-icon {
+  font-size: 1rem;
+  display: inline-flex;
+  transition: 150ms ease;
+}
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes colorFade {
+  0% {
+    box-shadow: inset 0 0 0 15px hotpink;
+  }
+  25% {
+    box-shadow: inset 0 0 0 15px lightseagreen;
+  }
+  50% {
+    box-shadow: inset 0 0 0 15px mistyrose;
+  }
+  75% {
+    box-shadow: inset 0 0 0 15px rebeccapurple;
+  }
+  100% {
+    box-shadow: inset 0 0 0 15px hotpink;
+  }
+}
+.wrapper {
+  font-size: 1.5rem;
+  max-width: 1024px;
+  margin: 0 auto;
+  padding: 50px 25px 20px 25px;
+}
+.wrapper h1 {
+  font-size: 3.1rem;
+}
+.wrapper h2 {
+  font-size: 2.8rem;
+}
+.wrapper h3 {
+  font-size: 2.1rem;
+}
+.wrapper h4 {
+  font-size: 1.8rem;
+}
+.wrapper p {
+  line-height: 1.4;
+}
+.wrapper header nav .nav-links {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 575px;
+  margin: 25px auto 100px auto;
+}
+.wrapper header .content.__top {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  padding: 15px;
+  margin: 0 0 50px 0;
+}
+.wrapper header .content.__top img {
+  border-radius: 100%;
+  flex: 0 1 250px;
+  animation: rotate 250s linear infinite;
+}
+.wrapper header .content.__top img:hover {
+  animation-play-state: paused;
+}
+.wrapper header .content.__top div {
+  width: calc(100% - 250px);
+  padding-left: 25px;
+}
+.wrapper header .content.__top div h1 {
+  margin: 0 0 25px 0;
+}
+@media (max-width: 700px) {
+  .wrapper header .content.__top {
+    display: flex;
+    flex-flow: column wrap;
+    padding: 0;
+  }
+  .wrapper header .content.__top img {
+    flex: 0 1 200px;
+    margin-bottom: 50px;
+  }
+  .wrapper header .content.__top div {
+    width: 100%;
+    padding: 0;
+  }
+}
+.wrapper .content.__middle {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+  align-items: baseline;
+}
+.wrapper .content.__middle div {
+  width: 100%;
+  max-width: 575px;
+}
+.wrapper .content.__middle div:not(:last-child) {
+  margin-bottom: 50px;
+}
+.wrapper .content.__middle section:not(:last-child) {
+  margin-bottom: 25px;
+}
+.wrapper .content.__middle h2 {
+  margin: 0 0 25px 0;
+}
+.wrapper .content.__middle h3 {
+  margin: 5px 0 5px 0;
+}
+.wrapper .content.__middle h4 {
+  margin: 5px 0 5px 0;
+}
+.wrapper .content.__middle p {
+  padding: 5px 10px 5px 0;
+}
+.wrapper .content.__middle ul {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  max-width: 320px;
+}
+.wrapper .content.__middle ul li {
+  padding: 5px 0;
+}
+.wrapper .content.__middle ul li:not(:last-child) {
+  margin-right: 15px;
+}
+.wrapper footer p {
+  font-size: 1rem;
+  width: 100%;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}

@@ -4,56 +4,272 @@
    License: none (public domain)
 */
 
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
 }
 body {
-	line-height: 1;
+  line-height: 1;
 }
-ol, ul {
-	list-style: none;
+ol,
+ul {
+  list-style: none;
 }
-blockquote, q {
-	quotes: none;
+blockquote,
+q {
+  quotes: none;
 }
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
 }
 table {
-	border-collapse: collapse;
-	border-spacing: 0;
+  border-collapse: collapse;
+  border-spacing: 0;
 }
 
 /* Set every element's box-sizing to border-box */
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
+  max-width: 100%;
 }
 
-html, body {
-    height: 100%;
+html,
+body {
+  min-height: 100%;
+}
+body {
+  // box-shadow: inset 0 0 0 15px @main-color;
+  animation: colorFade 25000ms linear infinite;
 }
 
+// Imports
+@import './vars.less';
+@import './typography.less';
+@import './links.less';
+@import './animations.less';
+@import './mixins.less';
+
+.wrapper {
+  font-size: 1.5rem;
+  max-width: 1024px;
+  margin: 0 auto;
+  padding: 50px 25px 20px 25px;
+
+  h1 {
+    font-size: 3.1rem;
+  }
+  h2 {
+    font-size: 2.8rem;
+  }
+  h3 {
+    font-size: 2.1rem;
+  }
+  h4 {
+    font-size: 1.8rem;
+  }
+  p {
+    line-height: 1.4;
+  }
+
+  // header
+  header nav .nav-links {
+    .flex-row();
+    justify-content: space-between;
+    width: 100%;
+    max-width: 575px;
+    margin: 25px auto 100px auto;
+  }
+
+  header .content.__top {
+    .flex-row();
+    align-items: center;
+    padding: 15px;
+    margin: 0 0 50px 0;
+    img {
+      border-radius: 100%;
+      flex: 0 1 250px;
+      animation: rotate 250s linear infinite;
+      &:hover {
+        animation-play-state: paused;
+      }
+    }
+    div {
+      width: calc(100% - 250px);
+      padding-left: 25px;
+      h1 {
+        margin: 0 0 25px 0;
+      }
+    }
+    @media (max-width: 700px) {
+      .flex-column();
+      padding: 0;
+      img {
+        flex: 0 1 200px;
+        margin-bottom: 50px;
+      }
+      div {
+        width: 100%;
+        padding: 0;
+      }
+    }
+  }
+  // end header
+
+  // main
+  .content.__middle {
+    .flex-row();
+    justify-content: space-evenly;
+    align-items: baseline;
+    div {
+      width: 100%;
+      max-width: 575px;
+      &:not(:last-child) {
+        margin-bottom: 50px;
+      }
+    }
+    section {
+      &:not(:last-child) {
+        margin-bottom: 25px;
+      }
+    }
+    h2 {
+      margin: 0 0 25px 0;
+    }
+    h3 {
+      margin: 5px 0 5px 0;
+    }
+    h4 {
+      margin: 5px 0 5px 0;
+    }
+    p {
+      padding: 5px 10px 5px 0;
+    }
+    ul {
+      .flex-row();
+      justify-content: flex-start;
+      max-width: 320px;
+      li {
+        padding: 5px 0;
+        &:not(:last-child) {
+          margin-right: 15px;
+        }
+      }
+    }
+  }
+  // end main
+
+  // footer
+  footer {
+    p {
+      font-size: 1rem;
+      width: 100%;
+      height: 100px;
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
+    }
+  }
+  // end footer
+}
