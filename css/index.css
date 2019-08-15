@@ -162,6 +162,11 @@ body {
 html {
   font-size: 62.5%;
 }
+@media (max-width: 500px) {
+  html {
+    font-size: 55%;
+  }
+}
 body {
   font-family: 'Open Sans', sans-serif;
 }
@@ -172,6 +177,14 @@ h4,
 h5,
 h6 {
   font-weight: 700;
+}
+.break {
+  display: inline-flex;
+}
+@media (max-width: 500px) {
+  .break {
+    display: block;
+  }
 }
 a {
   color: salmon;
@@ -199,6 +212,12 @@ a:visited {
   margin: 0 auto;
   padding: 50px 0 20px 0;
 }
+@media (max-width: 500px) {
+  .wrapper {
+    padding-right: 25px;
+    padding-left: 25px;
+  }
+}
 .wrapper h1 {
   font-size: 3.1rem;
 }
@@ -210,6 +229,9 @@ a:visited {
 }
 .wrapper h4 {
   font-size: 1.8rem;
+}
+.wrapper p {
+  line-height: 1.4;
 }
 .wrapper header nav .nav-links {
   display: flex;
@@ -241,6 +263,20 @@ a:visited {
 .wrapper header .content.__top div h1 {
   margin: 0 0 25px 0;
 }
+@media (max-width: 500px) {
+  .wrapper header .content.__top {
+    display: flex;
+    flex-flow: column wrap;
+    padding: 0;
+  }
+  .wrapper header .content.__top img {
+    flex: 0 1 100px;
+  }
+  .wrapper header .content.__top div {
+    width: 100%;
+    padding: 0;
+  }
+}
 .wrapper .content.__middle {
   display: flex;
   flex-flow: row wrap;
@@ -267,7 +303,6 @@ a:visited {
   margin: 5px 0 5px 0;
 }
 .wrapper .content.__middle p {
-  line-height: 1.4;
   padding: 5px 10px 5px 0;
 }
 .wrapper .content.__middle ul {
