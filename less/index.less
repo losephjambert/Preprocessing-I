@@ -148,6 +148,7 @@ body{
 @import './typography.less';
 @import './links.less';
 @import './animations.less';
+@import './mixins.less';
 
 .wrapper {
   font-size: 1.5rem;
@@ -169,8 +170,7 @@ body{
 
   // header
   header nav .nav-links {
-    display: flex;
-    flex-flow: row wrap;
+    .flex-row();
     justify-content: space-between;
     width: 100%;
     max-width: 575px;
@@ -178,8 +178,7 @@ body{
   }
 
   header .content.__top {
-    display: flex;
-    flex-flow: row wrap;
+    .flex-row();
     align-items: center;
     padding: 15px;
     margin: 0 0 50px 0;
@@ -203,8 +202,7 @@ body{
 
   // main
   .content.__middle {
-    display: flex;
-    flex-flow: row wrap;
+    .flex-row();
     justify-content: space-evenly;
     align-items: baseline;
     div {
@@ -233,8 +231,7 @@ body{
       padding: 5px 10px 5px 0;
     }
     ul{
-      display: flex;
-      flex-flow: row wrap;
+      .flex-row();
       justify-content: flex-start;
       max-width: 320px;
       li{
